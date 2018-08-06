@@ -14,8 +14,8 @@ const formatName = (name) => {
 const findNodeWithStyleId = (subtree, id) => {
   const styleFound = () => {
     if (subtree.styles) {
-      const matchingStyle = Object.keys(subtree.styles).find((key) => {
-        return subtree.styles[key] === id;
+      const matchingStyle = Object.values(subtree.styles).find((value) => {
+        return value === id;
       });
       return !!matchingStyle;
     }
